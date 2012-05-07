@@ -79,7 +79,6 @@ int main(void) {
 
   while (1) {
     delay(1000);
-    SerialUSB.println ("Iteration");
   }
   return 0;
 }
