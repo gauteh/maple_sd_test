@@ -55,8 +55,8 @@ int main(void) {
     SD_AVAILABLE = (card->errorCode () == 0);
 
   /* Beef up SPI speed after init is finished */
-  //if (SD_AVAILABLE)
-    //spi->begin (SPI_4_5MHZ, MSBFIRST, 0);
+  if (SD_AVAILABLE)
+    spi->begin (SPI_4_5MHZ, MSBFIRST, 0);
 
   /* Initialize FAT volume */
   if (SD_AVAILABLE)
@@ -71,7 +71,7 @@ int main(void) {
     SerialUSB.println ("[SD] Card initialized.");
 
     delay(1000);
-    root->ls (LS_R);
+    root->ls (LS_R | LS_DATE | LS_SIZE);
 
   } else {
     SerialUSB.println ("[SD] Could not initialize SD card.");
