@@ -24,7 +24,6 @@
  * Sd2Card class
  */
 
-
 #include "Sd2PinMap.h"
 #include "SdInfo.h"
 #include "HardwareSPI.h"

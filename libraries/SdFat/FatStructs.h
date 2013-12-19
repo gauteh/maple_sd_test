@@ -21,7 +21,6 @@
 #define FatStructs_h
 
 
-
 /**
  * \file
  * FAT file structures

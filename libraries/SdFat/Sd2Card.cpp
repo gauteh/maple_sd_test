@@ -19,7 +19,6 @@
  */
 
 
-
 #include <WProgram.h>
 #include "Sd2Card.h"
 #include "HardwareSPI.h"

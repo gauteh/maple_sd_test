@@ -20,7 +20,6 @@
 #ifndef SdInfo_h
 #define SdInfo_h
 #include <stdint.h>
-
 // Based on the document:
 //
 // SD Specifications

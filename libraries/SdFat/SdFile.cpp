@@ -17,7 +17,6 @@
  * along with the Arduino SdFat Library.  If not, see
  * <http://www.gnu.org/licenses/>.
  */
-
 #include "SdFat.h"
 //#include <avr/pgmspace.h>
 #include <WProgram.h>
@@ -601,7 +600,7 @@ void SdFile::printDirName(const dir_t& dir, uint8_t width) {
       SerialUSB.print('.');
       w++;
     }
-    SerialUSB.print((char)dir.name[i]);
+    SerialUSB.print((char) dir.name[i]);
     w++;
   }
   if (DIR_IS_SUBDIR(&dir)) {

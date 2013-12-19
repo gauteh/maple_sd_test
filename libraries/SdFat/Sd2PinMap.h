@@ -23,7 +23,6 @@
 
 #include <stdint.h>
 
-
 //------------------------------------------------------------------------------
 /** struct for mapping digital pins */
 struct pin_map_t 

@@ -23,7 +23,6 @@
  * \file
  * Useful utility functions.
  */
-
 #include <WProgram.h>
 //#include <avr/pgmspace.h>
 /** Store and print a string in flash memory.*/
@@ -55,5 +54,24 @@ static int FreeRam(void) {
                   - reinterpret_cast<int>(__brkval);
   }
   return free_memory;
+}
+//------------------------------------------------------------------------------
+/**
+ * %Print a string in flash memory to the serial port.
+ *
+ * \param[in] str Pointer to string stored in flash memory.
+ */
+static NOINLINE void SerialPrint_P(PGM_P str) {
+  for (uint8_t c; (c = pgm_read_byte(str)); str++) Serial.print(c);
+}
+//------------------------------------------------------------------------------
+/**
+ * %Print a string in flash memory followed by a CR/LF.
+ *
+ * \param[in] str Pointer to string stored in flash memory.
+ */
+static NOINLINE void SerialPrintln_P(PGM_P str) {
+  SerialPrint_P(str);
+  Serial.println();
 }
 #endif  // #define SdFatUtil_h
